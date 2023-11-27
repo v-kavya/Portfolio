@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Web Developer</p>
+          <h1>Hi,I'm <span>Kavya V</span></h1>
+        </div>
+      </div>
+    </div>
+    <! -------about------>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="image.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Hello , I'm Kavya , Currently I am pursuing my graduation in Computer
+              Science and Engineering at Bharat University , I am Passionate and Intrested in Web Development.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('education')">
+                Education
+              </p>
+              <p class="tab-links" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+            </div>
+            <div class="tab-contents active-tab" id="education">
+              <ul>
+                <li><span>Schooling</span><br />VRKM-2019</li>
+                <li><span>Intermediate</span><br />Narayana-2021</li>
+                <li><span>Graduation</span><br />Ongoing</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="skills">
+              <ul>
+                <li><span>Programing</span><br />Python</li>
+                <li><span>Web Development</span><br />Html,Css,javascript</li>
+              </ul>
+            </div>
+              <ul>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------portfolio------>
+    <div id="Portfolio">
+      <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="image 1.jpg" />
+            <div class="layer">
+              <h3>Social Media</h3>
+              <p>app allows you to connect with people</p>
+              <a href="#"><i class="fa-regular fa-share-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="image 2.jpg" />
+            <div class="layer">
+              <h3>Music App</h3>
+              <p>app allows you to all kinds of music</p>
+              <a href="#"><i class="fa-regular fa-share-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="img3.jpg" />
+            <div class="layer">
+              <h3>Shopping Website</h3>
+              <p>app allows people to purchase eletronic applainces</p>
+              <a href="#"><i class="fa-regular fa-share-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <!------contact----->
+    <div id="Contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>vutlakavya9@gmail.com</p>
+            <p>9133935957</p>
+            <div social-icons>
+              <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="my-cv.pdf" download class="btn btn1">CV Download</a>
+          </div>
+          <div class="contact-right">
+            <form action="">
+              <input
+                type="text"
+                name="Name"
+                placeholder="your name "
+                required
+              />
+              <input
+                type="email"
+                name="Email"
+                placeholder="your mail"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="4"
+                placeholder="your Message"
+              ></textarea>
+              <button type="submit" class="btn btn1">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
